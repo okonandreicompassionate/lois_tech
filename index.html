@@ -752,59 +752,86 @@
         </p>
       </div>
 
-      <!-- Form -->
-      <form class="space-y-6">
+      <form 
+  action="https://formspree.io/f/xykdadrw"
+  method="POST"
+  class="space-y-6"
+>
 
-        <!-- Name -->
-        <div>
-          <input
-            type="text"
-            placeholder="Full Name"
-            class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
-          />
-        </div>
+  <!-- Name -->
+  <div>
+    <input
+      type="text"
+      name="full_name"
+      placeholder="Full Name"
+      required
+      class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
+    />
+  </div>
 
-        <!-- Email -->
-        <div>
-          <input
-            type="email"
-            placeholder="Email Address"
-            class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
-          />
-        </div>
+  <!-- Email -->
+  <div>
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      required
+      class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
+    />
+  </div>
 
-        <!-- Project Type -->
-        <div>
-          <select
-            class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
-          >
-            <option class="text-black">New Build</option>
-            <option class="text-black">Existing Home Upgrade</option>
-            <option class="text-black">Commercial Space</option>
-            <option class="text-black">Hospitality Project</option>
-          </select>
-        </div>
+  <!-- Phone -->
+  <div>
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Phone Number"
+      required
+      pattern="[0-9+ ]{7,15}"
+      class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
+    />
+  </div>
 
-        <!-- Message -->
-        <div>
-          <textarea
-            rows="3"
-            placeholder="Project details..."
-            class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
-          ></textarea>
-        </div>
+  <!-- Project Type -->
+  <div>
+    <select
+      name="project_type"
+      required
+      class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
+    >
+      <option class="text-black" value="New Build">New Build</option>
+      <option class="text-black" value="Existing Home Upgrade">Existing Home Upgrade</option>
+      <option class="text-black" value="Commercial Space">Commercial Space</option>
+      <option class="text-black" value="Hospitality Project">Hospitality Project</option>
+    </select>
+  </div>
 
-        <!-- Button -->
-        <div class="pt-2 text-center">
-          <button
-            type="submit"
-            class="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
-          >
-            Submit Request
-          </button>
-        </div>
+  <!-- Message -->
+  <div>
+    <textarea
+      name="message"
+      rows="3"
+      placeholder="Project details..."
+      required
+      class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
+    ></textarea>
+  </div>
 
-      </form>
+  <input type="hidden" name="source" value="LoisTech Website" />
+
+  <!-- Button -->
+  <div class="pt-2 text-center">
+    <button
+      type="submit"
+      class="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+    >
+      Submit Request
+    </button>
+  </div>
+
+</form>
+        
+         
     </div>
 
   </div>

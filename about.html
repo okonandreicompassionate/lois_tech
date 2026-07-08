@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>About Us | LoisTech — The Architecture of Intelligent Living</title>
+  <meta name="description" content="LoisTech Automation and Integration Services bridges architectural structures and high-functioning, intelligent environments. Learn about our team, process, and mission." />
+  <meta
+    name="keywords"
+    content="LoisTech, about LoisTech, smart home automation, intelligent living, home automation Nigeria, smart security systems, Lagos, LoisTech team, LoisTech process"
+  />
+  <meta name="author" content="LoisTech" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://loistech.com.ng/about.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.imgur.com/IGBf9Dh.png" />
+  <link rel="apple-touch-icon" href="https://i.imgur.com/IGBf9Dh.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://loistech.com.ng/about.html" />
+  <meta property="og:title" content="About Us | LoisTech" />
+  <meta
+    property="og:description"
+    content="LoisTech bridges architectural structures and intelligent, privacy-first living environments. Meet the team and process behind the Architecture of Intelligent Living."
+  />
+  <meta property="og:image" content="https://i.imgur.com/f3iTliD.jpeg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us | LoisTech" />
+  <meta
+    name="twitter:description"
+    content="Meet the team and process behind LoisTech's Architecture of Intelligent Living."
+  />
+  <meta name="twitter:image" content="https://i.imgur.com/f3iTliD.jpeg" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    .font-titillium { font-family: "Titillium Web", sans-serif; }
+    .font-caveat { font-family: "Caveat", cursive; }
+    .font-pacifico { font-family: "Pacifico", cursive; }
+
+    :root {
+      --font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    body { font-family: var(--font); }
+
+    .hero-bg {
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.65)), url("https://i.imgur.com/f3iTliD.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .glass-card {
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    /* Editorial image frame used throughout */
+    .frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.25rem;
+    }
+    .frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .frame-tag {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      background: rgba(15,23,42,0.72);
+      color: #fff;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.75rem;
+      border-radius: 9999px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Partner logo marquee */
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 32s linear infinite;
+      gap: 1rem;
+    }
+    .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .logo-badge {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid rgba(15,23,42,0.08);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      width: 260px;
+      box-shadow: 0 1px 3px rgba(15,23,42,0.06);
+    }
+    .logo-badge .mark {
+      width: 100%;
+      height: 150px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-badge .mark img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      mix-blend-mode: multiply;
+    }
+    .logo-badge .mark span {
+      position: relative;
+      z-index: 1;
+    }
+    .logo-badge .name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #0f172a;
+      white-space: nowrap;
+      padding: 1rem 1.25rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+    }
+  </style>
+</head>
+  <body class="bg-slate-200 text-slate-900">
+    <!-- HERO -->
+    <header class="hero-bg relative w-full">
+      <!-- Top nav -->
+      <nav class="relative z-10">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
+          <a href="index.html" class="flex items-center gap-3 text-white">
+            <span class="inline-flex items-center justify-center">
+              <img class="h-[50px] w-auto" src="https://i.imgur.com/IGBf9Dh.png" alt="logo" />
+            </span>
+            <span class="text-base font-semibold tracking-tight sm:text-lg">LOIS TECH</span>
+          </a>
+
+          <div class="hidden items-center gap-8 md:flex">
+            <a href="index.html" class="text-sm font-medium text-white/90 hover:text-white">Home</a>
+            <a href="about.html" class="text-sm font-medium text-white hover:text-white">About us</a>
+            <a href="index.html#process" class="text-sm font-medium text-white/90 hover:text-white">Process</a>
+            <a href="index.html#testimonies" class="text-sm font-medium text-white/90 hover:text-white">Testimonials</a>
+            <a href="index.html#hiring" class="text-sm font-medium text-white/90 hover:text-white">Hiring</a>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a
+              href="index.html#consult"
+              class="hidden rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/25 backdrop-blur hover:bg-white/15 md:inline-flex"
+            >
+              Consult Us
+            </a>
+
+            <button
+              id="menuBtn"
+              class="inline-flex items-center justify-center rounded-xl bg-white/10 p-2 text-white ring-1 ring-white/25 backdrop-blur hover:bg-white/15 md:hidden"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5h14a1 1 0 100-2H3a1 1 0 000 2zm14 4H3a1 1 0 000 2h14a1 1 0 100-2zm0 6H3a1 1 0 000 2h14a1 1 0 100-2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+          <div class="flex flex-col gap-4 text-white">
+            <a href="index.html" class="text-sm">Home</a>
+            <a href="about.html" class="text-sm">About us</a>
+            <a href="index.html#process" class="text-sm">Process</a>
+            <a href="index.html#testimonies" class="text-sm">Testimonials</a>
+            <a href="index.html#hiring" class="text-sm">Hiring</a>
+            <a href="index.html#consult" class="text-sm">Consult Us</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero content -->
+      <div class="relative z-10 mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-20 lg:px-8">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Company Profile</p>
+        <h1 class="font-titillium mt-4 max-w-2xl text-4xl font-semibold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+          The people and process behind Intelligent Living
+        </h1>
+        <div class="glass-card mt-8 max-w-xl rounded-2xl p-5 text-white ring-1 ring-white/15 sm:p-6">
+          <p class="text-sm leading-6 text-white/85 sm:text-base">
+            LoisTech Automation and Integration Services is a specialized engineering and design
+            firm that bridges the gap between architectural structures and high-functioning,
+            intelligent environments.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ABOUT US -->
+      <section id="about-us" class="bg-slate-200">
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-12 lg:gap-14">
+            <div class="lg:col-span-5">
+              <h2 class="font-titillium text-3xl font-semibold text-slate-900 sm:text-4xl">About Us</h2>
+              <p class="mt-4 text-sm text-slate-500">RC 8465398 &middot; Lagos, Nigeria</p>
+
+              <p class="mt-6 text-base leading-7 text-slate-700">
+                Our company focuses on what it calls <span class="font-semibold text-slate-900">"The Architecture
+                of Intelligent Living."</span> Unlike standard tech installers, LoisTech integrates
+                enterprise-grade infrastructure directly into the construction process &mdash; privacy-first,
+                locally secured, and delivered with precision.
+              </p>
+              <p class="mt-5 text-base leading-7 text-slate-700">
+                Technology should elevate design, never clutter it. Every engagement is planned at the
+                blueprint stage, eliminating the messy retrofits that come with adding smart systems after
+                a build is finished.
+              </p>
+            </div>
+            <div class="lg:col-span-7">
+              <div class="frame h-[260px] sm:h-[360px] lg:h-[440px]">
+                <img
+                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  alt="Sanctuary-style living room finished by LoisTech"
+                  loading="lazy"
+                />
+                <span class="frame-tag">A finished sanctuary</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS STRIP -->
+      <section class="bg-white/95">
+        <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-0 md:divide-x md:divide-slate-200">
+            <div class="flex flex-col items-center px-2 md:px-6">
+              <p class="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">0ms</p>
+              <p class="mt-2 text-center text-sm text-slate-500">Local control latency</p>
+            </div>
+            <div class="flex flex-col items-center px-2 md:px-6">
+              <p class="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">100%</p>
+              <p class="mt-2 text-center text-sm text-slate-500">Privacy-first (no cloud required)</p>
+            </div>
+            <div class="flex flex-col items-center px-2 md:px-6">
+              <p class="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">4</p>
+              <p class="mt-2 text-center text-sm text-slate-500">Phase delivery standard</p>
+            </div>
+            <div class="flex flex-col items-center px-2 md:px-6">
+              <p class="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">24/7</p>
+              <p class="mt-2 text-center text-sm text-slate-500">Monitoring &amp; support coverage</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE LOISTECH STANDARD -->
+      <section id="standard" class="bg-slate-200">
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-12 lg:gap-14">
+            <div class="lg:col-span-5">
+              <h2 class="font-titillium text-3xl font-semibold text-slate-900 sm:text-4xl">The LoisTech Standard</h2>
+              <p class="mt-4 max-w-md text-sm leading-6 text-slate-600 sm:text-base">
+                We operate under a strict 4-phase SOP to ensure operational accountability, backed by an
+                Efficiency Guarantee that holds us to project timelines and mobilization logistics.
+              </p>
+              <div class="frame mt-8 h-[220px] sm:h-[280px]">
+                <img
+                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  alt="Electrical engineer installing wiring on site"
+                  loading="lazy"
+                />
+                <span class="frame-tag">Structure integration</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7">
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Phase 1</p>
+                  <h3 class="mt-2 text-lg font-semibold text-slate-900">Discovery &amp; Digital Mapping</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-600">Site audit and architectural plan review.</p>
+                </div>
+                <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Phase 2</p>
+                  <h3 class="mt-2 text-lg font-semibold text-slate-900">Infrastructure &amp; Logistics</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-600">Procurement of hardware and mobilization of technical teams.</p>
+                </div>
+                <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Phase 3</p>
+                  <h3 class="mt-2 text-lg font-semibold text-slate-900">Structure Integration</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-600">Physical deployment of networking, security, and furnishing.</p>
+                </div>
+                <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Phase 4</p>
+                  <h3 class="mt-2 text-lg font-semibold text-slate-900">Commissioning &amp; Handover</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-600">Stress-testing, client training, and final handover.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARKET TARGET -->
+      <section class="bg-black">
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-12 lg:gap-14 lg:items-center">
+            <div class="lg:col-span-5">
+              <h2 class="text-3xl font-semibold text-white sm:text-4xl">Who We Work With</h2>
+              <p class="mt-4 text-sm leading-6 text-white/60 sm:text-base">
+                LoisTech partners with the people responsible for how a space is built, and the people who
+                will live in it.
+              </p>
+              <div class="frame mt-8 h-[220px] sm:h-[260px]">
+                <img
+                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  alt="Team planning a project together"
+                  loading="lazy"
+                />
+                <span class="frame-tag">Planning together</span>
+              </div>
+            </div>
+            <div class="lg:col-span-7">
+              <div class="grid gap-4 sm:grid-cols-1">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <h3 class="text-lg font-semibold text-white">Real Estate Developers &amp; Construction Firms</h3>
+                  <p class="mt-2 text-sm leading-6 text-white/60">Intelligent infrastructure planned alongside the build, not bolted on after.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <h3 class="text-lg font-semibold text-white">Architects</h3>
+                  <p class="mt-2 text-sm leading-6 text-white/60">Baking technology into structural designs from the blueprint stage.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <h3 class="text-lg font-semibold text-white">Homeowners</h3>
+                  <p class="mt-2 text-sm leading-6 text-white/60">A sanctuary that's both highly advanced and aesthetically seamless.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE DO -->
+      <section id="what-we-do" class="bg-slate-200 py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-14 max-w-2xl">
+            <h2 class="text-4xl font-semibold text-slate-900 sm:text-5xl">What We Do</h2>
+            <p class="mt-4 text-slate-600">
+              We engineer intelligent infrastructure directly into your build &mdash; secure, seamless,
+              and designed for modern living.
+            </p>
+          </div>
+
+          <div class="grid gap-8 sm:grid-cols-2">
+            <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
+              <div class="frame h-[190px] rounded-none">
+                <img
+                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  alt="Wi-Fi and network infrastructure installation"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <div class="mb-3 text-2xl text-slate-900"><i class="fa-solid fa-wifi"></i></div>
+                <h3 class="text-xl font-semibold text-slate-900">Infrastructure &amp; Connectivity</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-600">
+                  Deploying Wi-Fi 7 backbones for zero-lag environments, engineered for the thick concrete
+                  structures common in premium builds.
+                </p>
+              </div>
+            </div>
+
+            <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
+              <div class="frame h-[190px] rounded-none">
+                <img
+                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  alt="Security cameras used for privacy-first monitoring"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <div class="mb-3 text-2xl text-slate-900"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 class="text-xl font-semibold text-slate-900">Privacy-First Security</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-600">
+                  AI-driven CCTV and biometric access control that prioritizes local, encrypted data
+                  sovereignty &mdash; your security data stays off public clouds.
+                </p>
+              </div>
+            </div>
+
+            <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
+              <div class="frame h-[190px] rounded-none">
+                <img
+                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  alt="Ambient lit living room showing smart lighting scenes"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <div class="mb-3 text-2xl text-slate-900"><i class="fa-regular fa-lightbulb"></i></div>
+                <h3 class="text-xl font-semibold text-slate-900">Smart Ecosystems</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-600">
+                  Intelligent lighting (Hero Scenes), climate control, and sound systems that enhance the
+                  aesthetic and comfort of a home.
+                </p>
+              </div>
+            </div>
+
+            <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
+              <div class="frame h-[190px] rounded-none">
+                <img
+                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  alt="High-end furniture piece from a turnkey furnishing project"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <div class="mb-3 text-2xl text-slate-900"><i class="fa-solid fa-couch"></i></div>
+                <h3 class="text-xl font-semibold text-slate-900">Turnkey Interior Furnishing</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-600">
+                  Professional procurement and design of high-end furniture to ensure a property is
+                  move-in ready.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEET THE TEAM -->
+      <section id="team" class="bg-slate-200 pb-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-semibold text-slate-900 sm:text-5xl">Meet Our Team</h2>
+          <p class="mt-4 max-w-2xl text-slate-600">
+            Behind every successful project is a dedicated team of specialists &mdash; a partnership
+            anchored by industry experts who ensure every detail, from first inquiry to final technical
+            deployment, is executed with precision and care.
+          </p>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2">
+            <div class="overflow-hidden rounded-2xl bg-slate-900">
+              <div class="frame h-[220px] rounded-none">
+                <img
+                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  alt="Mayowa Ogunbayo, Managing Director of LoisTech"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6 sm:p-8">
+                <h3 class="text-xl font-semibold text-white">Mayowa Ogunbayo</h3>
+                <p class="mt-1 text-sm text-white/50">Managing Director</p>
+                <p class="mt-4 text-sm leading-6 text-white/70">
+                  Mayowa Isaac Ogunbayo leads the strategic vision for the Architecture of Intelligent
+                  Living. With a background in professional facility management and over three years of
+                  industry experience, he oversees LoisTech's high-level operations to ensure every project
+                  adheres to the strict 4-Phase SOP &mdash; maintaining operational accountability and
+                  technical excellence across every deployment.
+                </p>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-2xl bg-slate-900">
+              <div class="frame h-[220px] rounded-none">
+                <img
+                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  alt="Nike Balogun, Lead Client Representative at LoisTech"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6 sm:p-8">
+                <h3 class="text-xl font-semibold text-white">Nike Balogun</h3>
+                <p class="mt-1 text-sm text-white/50">Lead Client Representative</p>
+                <p class="mt-4 text-sm leading-6 text-white/70">
+                  Nike anchors client operations, ensuring every interaction is handled with precision and
+                  professional warmth &mdash; maintaining a 100% satisfaction rate in front-line
+                  communication and making sure inquiries reach the right expert within minutes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARTNERS CAROUSEL -->
+      <section class="bg-white/95 py-16">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="flex items-end justify-between gap-4">
+            <div>
+              <h2 class="text-2xl font-semibold text-slate-900 sm:text-3xl">Service Providers &amp; Partners</h2>
+              <p class="mt-2 text-sm text-slate-500">The platforms and providers behind every deployment.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="marquee-wrap mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+          <div class="marquee-track" id="partnerTrack"></div>
+        </div>
+
+        <script>
+          const partners = [
+            { name: "Tuya Smart", initials: "TS", color: "#FF4C00" },
+            { name: "Smart Life", initials: "SL", color: "#2FA6EA" },
+            { name: "House of H", initials: "HH", color: "#0F172A" },
+            { name: "Zoho", initials: "Z", color: "#EE3E23" },
+            { name: "Paystack", initials: "PS", color: "#00C3F7" },
+            { name: "OPay", initials: "OP", color: "#1DAB61" },
+            { name: "TP-Link", initials: "TP", color: "#4ACBD6" },
+            { name: "United Bank for Africa", initials: "UBA", color: "#C8102E" },
+            { name: "Hikvision", initials: "HV", color: "#901E23" },
+            { name: "Mastercard", initials: "MC", color: "#EB001B" },
+            { name: "Visa", initials: "V", color: "#1A1F71" },
+            { name: "Verve", initials: "VE", color: "#C1272D" },
+          ];
+
+          const track = document.getElementById("partnerTrack");
+          const buildBadge = (p, hidden) => {
+            const el = document.createElement("div");
+            el.className = "logo-badge";
+            if (hidden) el.setAttribute("aria-hidden", "true");
+            el.innerHTML = `
+              <div class="mark" style="background:${p.color};">
+                <img src="https://i.imgur.com/f3iTliD.jpeg" alt="" loading="lazy" />
+                <span>${p.initials}</span>
+              </div>
+              <div class="name">${p.name}</div>
+            `;
+            return el;
+          };
+          partners.forEach((p) => track.appendChild(buildBadge(p, false)));
+          partners.forEach((p) => track.appendChild(buildBadge(p, true)));
+        </script>
+      </section>
+
+      <!-- CONSULT CTA -->
+      <section id="consult" class="bg-black py-24">
+        <div class="mx-auto max-w-6xl px-4 text-center">
+          <h2 class="text-3xl font-semibold text-white sm:text-4xl">Ready to build with LoisTech?</h2>
+          <p class="mx-auto mt-3 max-w-xl text-sm text-white/60">
+            Tell us about your project and we'll design a tailored intelligent solution.
+          </p>
+          <a
+            href="index.html#consult"
+            class="mt-8 inline-flex items-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+          >
+            Request a Consultation
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-300">
+      <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+        <div class="grid gap-12 md:grid-cols-12 md:gap-10">
+          <!-- Brand -->
+          <div class="md:col-span-4">
+            <a href="index.html" class="flex items-center gap-3 text-slate-900">
+              <img src="https://i.imgur.com/IGBf9Dh.png" alt="LoisTech" class="h-10 w-auto" />
+              <span class="text-lg font-semibold tracking-tight">LOIS TECH</span>
+            </a>
+            <p class="mt-4 max-w-sm text-sm leading-6 text-slate-500">
+              We bridge architectural shells and intelligent sanctuaries &mdash; building privacy-first,
+              seamless smart infrastructure into your space.
+            </p>
+            <div class="mt-6 flex items-center gap-4">
+              <a
+                href="https://www.instagram.com/l0istech?igsh=NzczbDQ4d2RheGx2"
+                class="rounded-xl border border-slate-200 p-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                aria-label="Instagram"
+                target="_blank"
+              >
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Z" />
+                  <path d="M12 7.25A4.75 4.75 0 1 1 7.25 12 4.75 4.75 0 0 1 12 7.25Zm0 1.5A3.25 3.25 0 1 0 15.25 12 3.25 3.25 0 0 0 12 8.75Z" />
+                  <path d="M17.5 6.75a.75.75 0 1 1-.75-.75.75.75 0 0 1 .75.75Z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/share/1GgpCW8D73/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-xl border border-slate-200 p-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                aria-label="Facebook"
+              >
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.6V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                </svg>
+              </a>
+              <a
+                href="https://ng.linkedin.com/in/lois-tech-491a15380"
+                class="rounded-xl border border-slate-200 p-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                aria-label="LinkedIn"
+                target="_blank"
+              >
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96v5.66H9.31V9h3.41v1.56h.05c.47-.89 1.63-1.83 3.35-1.83 3.58 0 4.23 2.36 4.23 5.43v6.29ZM5.34 7.43A2.07 2.07 0 1 1 5.34 3.3a2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Link columns -->
+          <div class="md:col-span-8">
+            <div class="grid gap-10 sm:grid-cols-3">
+              <div>
+                <p class="text-sm font-semibold text-slate-900">Navigation</p>
+                <ul class="mt-4 space-y-2 text-sm text-slate-500">
+                  <li><a class="hover:text-slate-900" href="index.html">Home</a></li>
+                  <li><a class="hover:text-slate-900" href="about.html">About</a></li>
+                  <li><a class="hover:text-slate-900" href="index.html#process">Use Cases</a></li>
+                  <li><a class="hover:text-slate-900" href="index.html#testimonies">Testimonials</a></li>
+                  <li><a class="hover:text-slate-900" href="tc.html">Terms &amp; Conditions</a></li>
+                  <li><a class="hover:text-slate-900" href="privacy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-slate-900">Company</p>
+                <ul class="mt-4 space-y-2 text-sm text-slate-500">
+                  <li><a class="hover:text-slate-900" href="about.html">About</a></li>
+                  <li><a class="hover:text-slate-900" href="index.html#process">Projects</a></li>
+                  <li><a class="hover:text-slate-900" href="index.html#testimonies">Resources</a></li>
+                  <li><a class="hover:text-slate-900" href="index.html#hiring">Become an employee</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-slate-900">Contact</p>
+                <ul class="mt-4 space-y-2 text-sm text-slate-500">
+                  <li>loistech.com.ng</li>
+                  <li>+234 905 304 4754</li>
+                  <li>Loistech.org@gmail.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="mt-12 flex flex-col gap-4 border-t border-slate-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm text-slate-500">© 2026 LoisTech. All rights reserved.</p>
+          <p class="text-sm text-slate-500">Architecture of Intelligent Living.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

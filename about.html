@@ -68,7 +68,7 @@
     body { font-family: var(--font); }
 
     .hero-bg {
-      background-image: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.65)), url("https://i.imgur.com/f3iTliD.jpeg");
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.65)), url("https://i.imgur.com/zavCE3a.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -142,12 +142,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.35;
+     opacity
       mix-blend-mode: multiply;
-    }
-    .logo-badge .mark span {
-      position: relative;
-      z-index: 1;
     }
     .logo-badge .name {
       font-size: 0.95rem;
@@ -159,6 +155,162 @@
 
     @media (prefers-reduced-motion: reduce) {
       .marquee-track { animation: none; }
+    }
+
+    /* ORGANOGRAM */
+    .org-wrap {
+      --line: rgba(255,255,255,0.14);
+      --node-bg: rgba(255,255,255,0.04);
+      --node-border: rgba(255,255,255,0.12);
+      --node-border-strong: rgba(255,255,255,0.35);
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+    .org-wrap::-webkit-scrollbar { height: 8px; }
+    .org-wrap::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 9999px; }
+
+    .org-tree, .org-tree ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .org-tree {
+      display: flex;
+      justify-content: center;
+      min-width: 920px;
+    }
+    .org-tree ul {
+      display: flex;
+      padding-top: 2.25rem;
+      position: relative;
+      transition: 0.3s;
+    }
+    .org-tree li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 2.25rem 0.85rem 0 0.85rem;
+      transition: 0.3s;
+    }
+    /* classic CSS-only org-chart connectors */
+    .org-tree li::before,
+    .org-tree li::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 50%;
+      width: 50%;
+      height: 2.25rem;
+      border-top: 2px solid var(--line);
+    }
+    .org-tree li::after {
+      right: auto;
+      left: 50%;
+      border-left: 2px solid var(--line);
+    }
+    .org-tree li:only-child::after,
+    .org-tree li:only-child::before {
+      display: none;
+    }
+    .org-tree li:only-child { padding-top: 0; }
+    .org-tree li:first-child::before,
+    .org-tree li:last-child::after {
+      border: 0 none;
+    }
+    .org-tree li:last-child::before {
+      border-right: 2px solid var(--line);
+      border-radius: 0 6px 0 0;
+    }
+    .org-tree li:first-child::after {
+      border-radius: 6px 0 0 0;
+    }
+    .org-tree ul ul::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-left: 2px solid var(--line);
+      width: 0;
+      height: 2.25rem;
+    }
+    .org-tree > li { padding-top: 0; }
+    .org-tree > li::before,
+    .org-tree > li::after { display: none; }
+
+    .org-node {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      background: var(--node-bg);
+      border: 1px solid var(--node-border);
+      border-radius: 0.9rem;
+      padding: 0.85rem 1.1rem;
+      min-width: 148px;
+      backdrop-filter: blur(4px);
+      transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    }
+    .org-node:hover {
+      border-color: var(--node-border-strong);
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
+    }
+    .org-node .org-title {
+      font-family: "Titillium Web", sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.01em;
+      color: #fff;
+      line-height: 1.25;
+    }
+    .org-node .org-sub {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .org-node.org-tier-0 { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.1); }
+    .org-node.org-tier-0 .org-title { font-size: 0.95rem; }
+    .org-node.org-tier-1 { border-color: rgba(255,255,255,0.28); background: rgba(255,255,255,0.07); }
+
+    /* Mobile fallback: collapse the horizontal tree into a clean indented list */
+    @media (max-width: 860px) {
+      .org-wrap { overflow-x: visible; padding-bottom: 0; }
+      .org-tree { min-width: 0; display: block; }
+      .org-tree ul { display: block; padding-top: 0; }
+      .org-tree ul::before,
+      .org-tree ul ul::before { display: none; }
+      .org-tree li {
+        display: block;
+        text-align: left;
+        padding: 0 0 0 1.35rem;
+        margin-top: 0.85rem;
+      }
+      .org-tree li::before,
+      .org-tree li::after {
+        content: '';
+        display: block;
+        top: 0;
+        bottom: -0.85rem;
+        left: 0;
+        right: auto;
+        width: 0;
+        height: auto;
+        border-left: 2px solid var(--line);
+        border-top: none;
+      }
+      .org-tree li::after { display: none; }
+      .org-tree li:last-child::before { bottom: 0.7rem; border-radius: 0; border-right: none; }
+      .org-tree li:only-child::before { display: block; bottom: 0; }
+      .org-tree > li {
+        padding-left: 0;
+        margin-top: 0;
+      }
+      .org-tree > li::before { display: none; }
+      .org-node { min-width: 0; width: 100%; align-items: flex-start; }
+      .org-node .org-title { text-align: left; }
     }
   </style>
 </head>
@@ -258,7 +410,7 @@
             <div class="lg:col-span-7">
               <div class="frame h-[260px] sm:h-[360px] lg:h-[440px]">
                 <img
-                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  src="https://i.imgur.com/2StXfAD.jpeg"
                   alt="Sanctuary-style living room finished by LoisTech"
                   loading="lazy"
                 />
@@ -305,7 +457,7 @@
               </p>
               <div class="frame mt-8 h-[220px] sm:h-[280px]">
                 <img
-                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  src="https://i.imgur.com/lKwH4nZ.jpeg"
                   alt="Electrical engineer installing wiring on site"
                   loading="lazy"
                 />
@@ -353,7 +505,7 @@
               </p>
               <div class="frame mt-8 h-[220px] sm:h-[260px]">
                 <img
-                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  src="https://i.imgur.com/rjnaG0O.jpeg"
                   alt="Team planning a project together"
                   loading="lazy"
                 />
@@ -395,7 +547,7 @@
             <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
               <div class="frame h-[190px] rounded-none">
                 <img
-                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  src="https://i.imgur.com/32HOpmx.jpeg"
                   alt="Wi-Fi and network infrastructure installation"
                   loading="lazy"
                 />
@@ -413,7 +565,7 @@
             <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
               <div class="frame h-[190px] rounded-none">
                 <img
-                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  src="https://i.imgur.com/ZDahgpi.jpeg"
                   alt="Security cameras used for privacy-first monitoring"
                   loading="lazy"
                 />
@@ -431,7 +583,7 @@
             <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
               <div class="frame h-[190px] rounded-none">
                 <img
-                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  src="https://i.imgur.com/dX0SXWJ.jpeg"
                   alt="Ambient lit living room showing smart lighting scenes"
                   loading="lazy"
                 />
@@ -449,14 +601,14 @@
             <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
               <div class="frame h-[190px] rounded-none">
                 <img
-                  src="https://i.imgur.com/f3iTliD.jpeg"
+                  src="https://i.imgur.com/fDtSlRm.jpeg"
                   alt="High-end furniture piece from a turnkey furnishing project"
                   loading="lazy"
                 />
               </div>
               <div class="p-6">
                 <div class="mb-3 text-2xl text-slate-900"><i class="fa-solid fa-couch"></i></div>
-                <h3 class="text-xl font-semibold text-slate-900">Turnkey Interior Furnishing</h3>
+                <h3 class="text-xl font-semibold text-slate-900">Turkey Interior Furnishing</h3>
                 <p class="mt-3 text-sm leading-6 text-slate-600">
                   Professional procurement and design of high-end furniture to ensure a property is
                   move-in ready.
@@ -531,24 +683,24 @@
           </div>
         </div>
 
-        <div class="marquee-wrap mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+        <div class="marquee-wrap mt-8 overflow-hidden [mask-imae:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
           <div class="marquee-track" id="partnerTrack"></div>
         </div>
 
         <script>
           const partners = [
-            { name: "Tuya Smart", initials: "TS", color: "#FF4C00" },
-            { name: "Smart Life", initials: "SL", color: "#2FA6EA" },
-            { name: "House of H", initials: "HH", color: "#0F172A" },
-            { name: "Zoho", initials: "Z", color: "#EE3E23" },
-            { name: "Paystack", initials: "PS", color: "#00C3F7" },
-            { name: "OPay", initials: "OP", color: "#1DAB61" },
-            { name: "TP-Link", initials: "TP", color: "#4ACBD6" },
-            { name: "United Bank for Africa", initials: "UBA", color: "#C8102E" },
-            { name: "Hikvision", initials: "HV", color: "#901E23" },
-            { name: "Mastercard", initials: "MC", color: "#EB001B" },
-            { name: "Visa", initials: "V", color: "#1A1F71" },
-            { name: "Verve", initials: "VE", color: "#C1272D" },
+            { name: "Tuya Smart", initials: "TS", image:"https://i.imgur.com/YX6qAOM.png" },
+            { name: "Smart Life", initials: "SL", color: "#2FA6EA", image:"https://i.imgur.com/jGdlha6.png" },
+            { name: "House of H", initials: "HH", color: "#0F172A", image:"https://i.imgur.com/QLsoj09.png"  },
+            { name: "Zoho", initials: "Z", color: "#EE3E23" , image:"https://i.pinimg.com/736x/6f/72/0a/6f720ac8f27375489efc5b8d35a2d2a1.jpg" },
+            { name: "Paystack", initials: "PS", color: "#00C3F7" , image:"https://i.pinimg.com/1200x/fd/88/5c/fd885cea347af3b4bb4ac322566415cf.jpg" },
+            { name: "OPay", initials: "OP", color: "#1DAB61" , image:"https://i.pinimg.com/736x/f6/92/23/f692231702deaeec08c5b21598142b65.jpg" },
+            { name: "TP-Link", initials: "TP", color: "#4ACBD6",image:"https://i.pinimg.com/1200x/70/65/b6/7065b66588857b0bdebfea0cacc02ec5.jpg" },
+            { name: "United Bank for Africa", initials: "UBA",image:"https://i.pinimg.com/736x/3a/6a/3e/3a6a3e0095e18fb972485b12af8adb2e.jpg" },
+            { name: "Hikvision", initials: "HV", color: "#901E23" , image:"https://i.pinimg.com/736x/b7/13/a2/b713a2d3fc29ee83279cd074ad23093f.jpg" },
+            { name: "Mastercard", initials: "MC", color: "#EB001B", image:"https://i.pinimg.com/1200x/c4/f5/86/c4f586eb82c34b5d04ded5ab2271126e.jpg" },
+            { name: "Visa", initials: "V", color: "#1A1F71" , image:"https://i.pinimg.com/1200x/bb/7a/43/bb7a43b0bef9e268116078b6e0ef8d81.jpg" },
+            { name: "Verve", initials: "VE", color: "#C1272D" , image:"https://i.imgur.com/sZbF1jN.png" },
           ];
 
           const track = document.getElementById("partnerTrack");
@@ -557,8 +709,8 @@
             el.className = "logo-badge";
             if (hidden) el.setAttribute("aria-hidden", "true");
             el.innerHTML = `
-              <div class="mark" style="background:${p.color};">
-                <img src="https://i.imgur.com/f3iTliD.jpeg" alt="" loading="lazy" />
+              <div class="mark" ;">
+                <img src="${p.image}" alt="" loading="lazy" />
                 <span>${p.initials}</span>
               </div>
               <div class="name">${p.name}</div>
@@ -568,6 +720,128 @@
           partners.forEach((p) => track.appendChild(buildBadge(p, false)));
           partners.forEach((p) => track.appendChild(buildBadge(p, true)));
         </script>
+      </section>
+
+      <!-- ORGANOGRAM -->
+      <section id="organogram" class="bg-slate-400 py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Company Structure</p>
+            <h2 class="font-titillium mt-4 text-3xl font-semibold text-white sm:text-4xl">The Organogram</h2>
+            <p class="mt-4 text-sm leading-6 text-white/60 sm:text-base">
+              LoisTech
+              <span class="mx-1 text-white/25">&middot;</span> loistech.com.ng
+              <span class="mx-1 text-white/25">&middot;</span> +234 905 304 4754
+              <span class="mx-1 text-white/25">&middot;</span> Loistech.org@gmail.com
+            </p>
+          </div>
+
+          <div class="org-wrap mt-12">
+            <ul class="org-tree">
+              <li>
+                <div class="org-node org-tier-0">
+                  <span class="org-sub">Governance</span>
+                  <span class="org-title">Board of Directors</span>
+                </div>
+                <ul>
+                  <li>
+                    <div class="org-node org-tier-0">
+                      <span class="org-sub">Executive</span>
+                      <span class="org-title">CEO / MD</span>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="org-node org-tier-1">
+                          <span class="org-title">PA</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="org-node org-tier-1">
+                          <span class="org-title">Legal Services &amp; Secretary</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="org-node org-tier-1">
+                          <span class="org-sub">Department</span>
+                          <span class="org-title">Technical Service Department</span>
+                        </div>
+                        <ul>
+                          <li>
+                            <div class="org-node">
+                              <span class="org-title">Project Manager (PM)</span>
+                            </div>
+                            <ul>
+                              <li>
+                                <div class="org-node">
+                                  <span class="org-title">Client Interface &amp; Timeline</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="org-node">
+                                  <span class="org-title">Site Survey &amp; Discovery Team</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="org-node">
+                                  <span class="org-title">Electrical Engineering Team</span>
+                                  <span class="org-sub">Integrators &amp; Electricians</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="org-node org-tier-1">
+                          <span class="org-sub">Department</span>
+                          <span class="org-title">Interior Design &amp; Furnishing Department</span>
+                        </div>
+                        <ul>
+                          <li>
+                            <div class="org-node">
+                              <span class="org-title">Interior Design Team</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="org-node">
+                              <span class="org-title">Procurement &amp; Curating Team</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="org-node">
+                              <span class="org-title">Staging &amp; Installation Team</span>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="org-node org-tier-1">
+                          <span class="org-sub">Department</span>
+                          <span class="org-title">Operations &amp; Logistics</span>
+                        </div>
+                        <ul>
+                          <li>
+                            <div class="org-node">
+                              <span class="org-title">Operations Manager</span>
+                            </div>
+                            <ul>
+                              <li>
+                                <div class="org-node">
+                                  <span class="org-title">Professional Efficiency</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
       </section>
 
       <!-- CONSULT CTA -->
@@ -644,22 +918,23 @@
               <div>
                 <p class="text-sm font-semibold text-slate-900">Navigation</p>
                 <ul class="mt-4 space-y-2 text-sm text-slate-500">
-                  <li><a class="hover:text-slate-900" href="index.html">Home</a></li>
-                  <li><a class="hover:text-slate-900" href="about.html">About</a></li>
-                  <li><a class="hover:text-slate-900" href="index.html#process">Use Cases</a></li>
-                  <li><a class="hover:text-slate-900" href="index.html#testimonies">Testimonials</a></li>
-                  <li><a class="hover:text-slate-900" href="tc.html">Terms &amp; Conditions</a></li>
-                  <li><a class="hover:text-slate-900" href="privacy.html">Privacy Policy</a></li>
-                </ul>
-              </div>
-              <div>
-                <p class="text-sm font-semibold text-slate-900">Company</p>
-                <ul class="mt-4 space-y-2 text-sm text-slate-500">
-                  <li><a class="hover:text-slate-900" href="about.html">About</a></li>
-                  <li><a class="hover:text-slate-900" href="index.html#process">Projects</a></li>
-                  <li><a class="hover:text-slate-900" href="index.html#testimonies">Resources</a></li>
-                  <li><a class="hover:text-slate-900" href="index.html#hiring">Become an employee</a></li>
-                </ul>
+              <li><a class="hover:text-slate-900" href="#">Home</a></li>
+              <li><a class="hover:text-slate-900" href="#us">Solutions</a></li>
+              <li><a class="hover:text-slate-900" href="usecases.html">Use Cases</a></li>
+              <li><a class="hover:text-slate-900" href="#testimonies">Testimonials</a></li>
+              <li><a class="hover:text-slate-900" href="tc.html">Terms & Conditions</a></li>
+              <li><a class="hover:text-slate-900" href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold text-slate-900">Company</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-500">
+              <li><a class="hover:text-slate-900" href="about.html">About</a></li>
+              <li><a class="hover:text-slate-900" href="projects.html">Projects</a></li>
+              <li><a class="hover:text-slate-900" href="resources.html">Resources</a></li>
+              <li><a class="hover:text-slate-900" href="#hiring">Become an employee</a></li>
+            </ul>
               </div>
               <div>
                 <p class="text-sm font-semibold text-slate-900">Contact</p>

@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Use Cases | LoisTech — Systems Built For the Space</title>
+  <meta name="description" content="Four ways LoisTech deploys privacy-first smart infrastructure: new builds, retrofits, commercial fit-outs, and hospitality properties." />
+  <meta name="keywords" content="LoisTech use cases, smart home automation Nigeria, commercial automation Lagos, hospitality smart systems, residential automation, smart building infrastructure" />
+  <meta name="author" content="LoisTech" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://loistech.com.ng/use-cases.html" />
+
+  <link rel="icon" type="image/png" href="https://i.imgur.com/IGBf9Dh.png" />
+  <link rel="apple-touch-icon" href="https://i.imgur.com/IGBf9Dh.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://loistech.com.ng/use-cases.html" />
+  <meta property="og:title" content="LoisTech | Use Cases — Systems Built For the Space" />
+  <meta property="og:description" content="Four ways LoisTech deploys privacy-first smart infrastructure across residential, commercial, and hospitality properties." />
+  <meta property="og:image" content="https://i.imgur.com/huoKSJD.jpeg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LoisTech | Use Cases" />
+  <meta name="twitter:description" content="Four ways LoisTech deploys privacy-first smart infrastructure." />
+  <meta name="twitter:image" content="https://i.imgur.com/huoKSJD.jpeg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LoisTech",
+    "url": "https://loistech.com.ng",
+    "logo": "https://i.imgur.com/IGBf9Dh.png",
+    "sameAs": [
+      "https://www.instagram.com/l0istech",
+      "https://www.facebook.com/share/1GgpCW8D73/",
+      "https://ng.linkedin.com/in/lois-tech-491a15380"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    .font-titillium { font-family: "Titillium Web", sans-serif; }
+    .font-mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+    :root { --font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { font-family: var(--font); }
+
+    .blueprint-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    .spec-label {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .frame { position: relative; }
+    .frame .corner {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-color: currentColor;
+      pointer-events: none;
+    }
+    .frame .corner.tl { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; }
+    .frame .corner.tr { top: -1px; right: -1px; border-top: 2px solid; border-right: 2px solid; }
+    .frame .corner.bl { bottom: -1px; left: -1px; border-bottom: 2px solid; border-left: 2px solid; }
+    .frame .corner.br { bottom: -1px; right: -1px; border-bottom: 2px solid; border-right: 2px solid; }
+
+    .tab-index {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12px;
+    }
+
+    .spec-row { border-top: 1px solid rgba(15,23,42,0.1); }
+    .spec-row:last-child { border-bottom: 1px solid rgba(15,23,42,0.1); }
+
+    #shopPromo {
+      position: fixed; right: 20px; bottom: 20px; z-index: 60;
+      display: flex; align-items: center; gap: 10px;
+      background: #0f172a; color: #fff; padding: 12px 16px; border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.1);
+      max-width: 280px; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease;
+    }
+    #shopPromo:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,0,0,0.45); }
+    #shopPromo .promo-icon {
+      flex-shrink: 0; width: 34px; height: 34px; border-radius: 9px; background: #fff; color: #0f172a;
+      display: grid; place-items: center; font-size: 15px;
+    }
+    #shopPromo .promo-text { line-height: 1.2; }
+    #shopPromo .promo-title { font-size: 13px; font-weight: 600; }
+    #shopPromo .promo-sub { font-size: 11px; color: rgba(255,255,255,0.65); }
+    #shopPromoClose {
+      position: absolute; top: -8px; right: -8px; width: 22px; height: 22px; border-radius: 50%;
+      background: #fff; color: #0f172a; border: 1px solid rgba(0,0,0,0.1);
+      display: grid; place-items: center; font-size: 12px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    @media (max-width: 480px) {
+      #shopPromo { right: 12px; left: 12px; bottom: 12px; max-width: none; }
+    }
+  </style>
+</head>
+  <body class="bg-slate-200 text-slate-900">
+
+    <!-- NAV: slim fixed bar, no hero overlay this time -->
+    <nav class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/95 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3 text-white">
+          <img class="h-9 w-auto" src="https://i.imgur.com/IGBf9Dh.png" alt="logo" />
+          <span class="text-sm font-semibold tracking-tight">LOIS TECH</span>
+        </a>
+
+        <div class="hidden items-center gap-9 md:flex">
+          <a href="index.html" class="text-sm text-white/70 transition hover:text-white">Home</a>
+          <a href="about.html" class="text-sm text-white/70 transition hover:text-white">About</a>
+          <a href="use-cases.html" class="border-b border-white pb-1 text-sm text-white">Use Cases</a>
+          <a href="index.html#hiring" class="text-sm text-white/70 transition hover:text-white">Hiring</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="#request"
+            class="hidden rounded-full border border-white/25 px-4 py-2 text-xs font-semibold tracking-wide text-white transition hover:bg-white/10 md:inline-flex">
+            REQUEST A SYSTEM
+          </a>
+          <button id="menuBtn" class="inline-flex items-center justify-center rounded-lg border border-white/20 p-2 text-white md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 5h14a1 1 0 100-2H3a1 1 0 000 2zm14 4H3a1 1 0 000 2h14a1 1 0 100-2zm0 6H3a1 1 0 000 2h14a1 1 0 100-2z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-900 px-4 pb-5 md:hidden">
+        <div class="flex flex-col gap-4 pt-4 text-white/80">
+          <a href="index.html" class="text-sm">Home</a>
+          <a href="about.html" class="text-sm">About</a>
+          <a href="use-cases.html" class="text-sm text-white">Use Cases</a>
+          <a href="index.html#hiring" class="text-sm">Hiring</a>
+          <a href="#request" class="text-sm text-white">Request a system →</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO: blueprint grid, no photo -->
+    <header class="blueprint-bg bg-slate-900">
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <p class="spec-label text-white/50">SPEC SHEET / USE&nbsp;CASES / REV.2026</p>
+        <h1 class="font-titillium mt-6 max-w-3xl text-4xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-6xl">
+          Four Kinds of Space.<br />Four Different Systems.
+        </h1>
+        <p class="mt-6 max-w-xl text-sm leading-6 text-white/70 sm:text-base">
+          A residence, a retrofit, an office floor, and a hotel room don't run on the same
+          logic — so we don't sell one system and force it to fit. Below is how each
+          deployment actually differs, end to end.
+        </p>
+
+        <!-- Index / jump nav styled as a legend -->
+        <div class="mt-12 flex flex-wrap gap-3">
+          <a href="#new-build" class="tab-index inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-white/80 transition hover:border-white/50 hover:text-white">
+            <span class="text-white/40">01</span> New Build
+          </a>
+          <a href="#retrofit" class="tab-index inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-white/80 transition hover:border-white/50 hover:text-white">
+            <span class="text-white/40">02</span> Retrofit
+          </a>
+          <a href="#commercial" class="tab-index inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-white/80 transition hover:border-white/50 hover:text-white">
+            <span class="text-white/40">03</span> Commercial
+          </a>
+          <a href="#hospitality" class="tab-index inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-white/80 transition hover:border-white/50 hover:text-white">
+            <span class="text-white/40">04</span> Hospitality
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- USE CASE 01 -->
+    <section id="new-build" class="bg-slate-200 py-20 lg:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-5">
+            <span class="font-titillium text-6xl font-light text-slate-300 sm:text-7xl">01</span>
+            <h2 class="font-titillium mt-4 text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl">
+              New Build Residences
+            </h2>
+            <p class="mt-5 text-sm leading-6 text-slate-600 sm:text-base">
+              When we're in from blueprint stage, automation stops being an add-on. Cabling,
+              sensors, and control points get planned alongside plumbing and electrical — so
+              the finished home never shows the wiring, only the result.
+            </p>
+
+            <div class="mt-8">
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Phase</span>
+                <span class="text-sm text-slate-800">Blueprint stage</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Control</span>
+                <span class="text-sm text-slate-800">100% local, no cloud</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Integration</span>
+                <span class="text-sm text-slate-800">Wired into structure</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Timeline</span>
+                <span class="text-sm text-slate-800">Aligned to build schedule</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="frame overflow-hidden rounded-sm text-white">
+              <img src="https://i.imgur.com/xeWGwd4.jpeg" alt="New build residence interior" class="h-[340px] w-full object-cover sm:h-[460px]" />
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASE 02 -->
+    <section id="retrofit" class="bg-white/95 py-20 lg:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div class="order-2 lg:order-1 lg:col-span-7">
+            <div class="frame overflow-hidden rounded-sm text-slate-900">
+              <img src="https://i.imgur.com/jLuSaUf.jpeg" alt="Existing home upgrade" class="h-[340px] w-full object-cover sm:h-[460px]" />
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 lg:col-span-5">
+            <span class="font-titillium text-6xl font-light text-slate-300 sm:text-7xl">02</span>
+            <h2 class="font-titillium mt-4 text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl">
+              Existing Home Upgrades
+            </h2>
+            <p class="mt-5 text-sm leading-6 text-slate-600 sm:text-base">
+              Most homes we upgrade are already lived in. So the work is built around minimal
+              disruption — wireless-first where possible, targeted rewiring only where it earns
+              its keep, and a handover that leaves the space exactly as clean as we found it.
+            </p>
+
+            <div class="mt-8">
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Phase</span>
+                <span class="text-sm text-slate-800">Post-occupancy</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Control</span>
+                <span class="text-sm text-slate-800">Wireless-first, local hub</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Integration</span>
+                <span class="text-sm text-slate-800">Room-by-room rollout</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Timeline</span>
+                <span class="text-sm text-slate-800">Days, not weeks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASE 03 -->
+    <section id="commercial" class="bg-slate-200 py-20 lg:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-5">
+            <span class="font-titillium text-6xl font-light text-slate-300 sm:text-7xl">03</span>
+            <h2 class="font-titillium mt-4 text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl">
+              Commercial Spaces
+            </h2>
+            <p class="mt-5 text-sm leading-6 text-slate-600 sm:text-base">
+              Offices and mixed-use blocks need systems that scale by floor, not by guesswork.
+              We deploy access control, occupancy-based climate, and energy monitoring as one
+              connected layer — so facilities teams see the whole building from a single dashboard.
+            </p>
+
+            <div class="mt-8">
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Phase</span>
+                <span class="text-sm text-slate-800">Fit-out / operational</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Control</span>
+                <span class="text-sm text-slate-800">Centralized, per-floor zoning</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Integration</span>
+                <span class="text-sm text-slate-800">Access + climate + energy, one layer</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Timeline</span>
+                <span class="text-sm text-slate-800">Scales with occupancy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="frame overflow-hidden rounded-sm text-white">
+              <img src="https://i.imgur.com/huoKSJD.jpeg" alt="Commercial building automation" class="h-[340px] w-full object-cover sm:h-[460px]" />
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASE 04 -->
+    <section id="hospitality" class="bg-white/95 py-20 lg:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div class="order-2 lg:order-1 lg:col-span-7">
+            <div class="frame overflow-hidden rounded-sm text-slate-900">
+              <img src="https://i.imgur.com/f3iTliD.jpeg" alt="Hospitality property automation" class="h-[340px] w-full object-cover sm:h-[460px]" />
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 lg:col-span-5">
+            <span class="font-titillium text-6xl font-light text-slate-300 sm:text-7xl">04</span>
+            <h2 class="font-titillium mt-4 text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl">
+              Hospitality Projects
+            </h2>
+            <p class="mt-5 text-sm leading-6 text-slate-600 sm:text-base">
+              A hotel or short-let property needs two systems working as one: something guests
+              barely notice, and something staff can run efficiently. We build guest-room
+              controls tied to booking status, and a property-wide view that keeps operations simple.
+            </p>
+
+            <div class="mt-8">
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Phase</span>
+                <span class="text-sm text-slate-800">Pre-opening or renovation</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Control</span>
+                <span class="text-sm text-slate-800">Guest-facing + staff dashboard</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Integration</span>
+                <span class="text-sm text-slate-800">Synced to booking / PMS</span>
+              </div>
+              <div class="spec-row flex items-center justify-between py-3">
+                <span class="spec-label text-slate-500">Timeline</span>
+                <span class="text-sm text-slate-800">Property-wide rollout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUEST FORM -->
+    <section id="request" class="bg-black py-24">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="mx-auto max-w-2xl rounded-3xl border border-white/10 bg-white/5 p-10 shadow-[0_30px_80px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
+          <p class="spec-label text-center text-white/40">REQUEST_SYSTEM.FORM</p>
+          <div class="mb-8 mt-3 text-center">
+            <h2 class="text-3xl font-semibold text-white">Which One Sounds Like Your Project?</h2>
+            <p class="mt-3 text-sm text-white/60">Tell us the space and we'll scope a system built for exactly that use case.</p>
+          </div>
+
+          <form action="https://formspree.io/f/xykdadrw" method="POST" class="space-y-6">
+            <div>
+              <input type="text" name="full_name" placeholder="Full Name" required
+                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+            </div>
+            <div>
+              <input type="email" name="email" placeholder="Email Address" required
+                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+            </div>
+            <div>
+              <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9+ ]{7,15}"
+                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+            </div>
+            <div>
+              <select name="project_type" required
+                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40">
+                <option class="text-black" value="New Build">New Build</option>
+                <option class="text-black" value="Existing Home Upgrade">Existing Home Upgrade</option>
+                <option class="text-black" value="Commercial Space">Commercial Space</option>
+                <option class="text-black" value="Hospitality Project">Hospitality Project</option>
+              </select>
+            </div>
+            <div>
+              <textarea name="message" rows="3" placeholder="Project details..." required
+                class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"></textarea>
+            </div>
+            <input type="hidden" name="source" value="LoisTech Use Cases Page" />
+            <div class="pt-2 text-center">
+              <button type="submit" class="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90">
+                Submit Request
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-300">
+      <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+        <div class="grid gap-12 md:grid-cols-12 md:gap-10">
+          <div class="md:col-span-4">
+            <a href="index.html" class="flex items-center gap-3 text-slate-900">
+              <img src="https://i.imgur.com/IGBf9Dh.png" alt="LoisTech" class="h-10 w-auto" />
+              <span class="text-lg font-semibold tracking-tight">LOIS TECH</span>
+            </a>
+            <p class="mt-4 max-w-sm text-sm leading-6 text-slate-500">
+              We bridge architectural shells and intelligent sanctuaries — building
+              privacy-first, seamless smart infrastructure into your space.
+            </p>
+            <div class="mt-6 flex items-center gap-4">
+              <a href="https://www.instagram.com/l0istech?igsh=NzczbDQ4d2RheGx2" target="_blank"
+                class="rounded-xl border border-slate-200 p-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Z" />
+                  <path d="M12 7.25A4.75 4.75 0 1 1 7.25 12 4.75 4.75 0 0 1 12 7.25Zm0 1.5A3.25 3.25 0 1 0 15.25 12 3.25 3.25 0 0 0 12 8.75Z" />
+                  <path d="M17.5 6.75a.75.75 0 1 1-.75-.75.75.75 0 0 1 .75.75Z" />
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/share/1GgpCW8D73/" target="_blank" rel="noopener noreferrer"
+                class="rounded-xl border border-slate-200 p-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.6V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                </svg>
+              </a>
+              <a href="https://ng.linkedin.com/in/lois-tech-491a15380" target="_blank"
+                class="rounded-xl border border-slate-200 p-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96v5.66H9.31V9h3.41v1.56h.05c.47-.89 1.63-1.83 3.35-1.83 3.58 0 4.23 2.36 4.23 5.43v6.29ZM5.34 7.43A2.07 2.07 0 1 1 5.34 3.3a2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-8">
+            <div class="grid gap-10 sm:grid-cols-3">
+              <div>
+                <p class="text-sm font-semibold text-slate-900">Navigation</p>
+               <ul class="mt-4 space-y-2 text-sm text-slate-500">
+              <li><a class="hover:text-slate-900" href="#">Home</a></li>
+              <li><a class="hover:text-slate-900" href="#us">Solutions</a></li>
+              <li><a class="hover:text-slate-900" href="usecases.html">Use Cases</a></li>
+              <li><a class="hover:text-slate-900" href="#testimonies">Testimonials</a></li>
+              <li><a class="hover:text-slate-900" href="tc.html">Terms & Conditions</a></li>
+              <li><a class="hover:text-slate-900" href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold text-slate-900">Company</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-500">
+              <li><a class="hover:text-slate-900" href="about.html">About</a></li>
+              <li><a class="hover:text-slate-900" href="projects.html">Projects</a></li>
+              <li><a class="hover:text-slate-900" href="resources.html">Resources</a></li>
+              <li><a class="hover:text-slate-900" href="#hiring">Become an employee</a></li>
+            </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col gap-4 border-t border-slate-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm text-slate-500">© 2026 LoisTech. All rights reserved.</p>
+          <p class="text-sm text-slate-500">Architecture of Intelligent Living.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FIXED SHOP PROMO WIDGET -->
+    <a id="shopPromo" href="https://shop.loistech.com.ng/shop" target="_blank" rel="noopener noreferrer">
+      <span class="promo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+      <span class="promo-text">
+        <span class="promo-title">Visit our shop</span>
+        <span class="promo-sub">Smart devices & accessories →</span>
+      </span>
+      <button id="shopPromoClose" type="button" aria-label="Close promo">✕</button>
+    </a>
+
+    <script>
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+      btn.addEventListener("click", () => { menu.classList.toggle("hidden"); });
+
+      const promo = document.getElementById("shopPromo");
+      const promoClose = document.getElementById("shopPromoClose");
+      promoClose.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        promo.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
